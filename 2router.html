@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Router</title>
+
+    <link rel="icon" href="./images/linux-hero.png">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> NasWeb </a>
+
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="courses.html">courses</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+    <!-- account form section starts  -->
+
+    <div class="account-form">
+
+        <div id="close-form" class="fas fa-times"></div>
+
+        <div class="buttons">
+            <span class="btn active login-btn">login</span>
+            <span class="btn register-btn">register</span>
+        </div>
+
+        <form class="login-form active" action="">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+        <form class="register-form" action="">
+            <h3>register now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <input type="password" placeholder="confirm your password" class="box">
+            <input type="submit" value="register now" class="btn">
+        </form>
+
+    </div>
+
+    <!-- account form section ends -->
+
+    <!-- header section ends -->
+
+    <section class="heading-link">
+        <h3>2 ROUTER <br> 4 SWITCH <br> 8 PC</h3>
+        <p> <a href="cisco.html">Back</a> / cisco </p>
+    </section>
+
+    <!-- about section starts  -->
+    <h1 class="heading"> Cara menyetting 2 router dengan menggunakan cara DHCP </h1>
+    <section class="about">
+
+        <div class="image">
+            <img src="images/topologi2.png" alt="">
+            <small><i><b>Gambar 1.0</b></i></small>
+        </div>
+        <div class="image">
+        </div>
+
+        <div class="content">
+            <h3 class="about-title">Apa yang harus dipersiapkan? :</h3>
+            <p style="font-weight: bold;">
+                •> 2 Router 1841 <br>
+                •> 4 Switch 2950-24 <br>
+                •> 8 Pc
+            </p>
+            <p>Terlebih dahulu kalian membuat topologi seperti gamabr di atas/terserah kalian mau bentuk seperti apa
+                , disini saya ngebuat nya hanya simpel aja ya. <br>
+                setelah kaliam membuat topologi seperti disamping , kalian langsung memasangkan kabel kepada
+                masing-masing perangkat, Oh iya kalian sudah taukan jenis -jenis kabel dan fungsi nya ("STARIGHT DAN
+                CROSSOVER")?, jika
+                ada yang belum tau saya akan beritahu: <br>
+                <b><i>STRAIGHT</i> :</b> untuk menghubungkan perangkat yang berbeda, contoh("router ke switch" "switch
+                ke
+                pc ") seperti itu ya guys <br>
+                <b><i>CROSSOVER</i> :</b> untuk menghubungkan perangkat yang sama, contoh ("router ke router" "switch ke
+                switch").
+            </p>
+            <p>oh iya temen-temen, kenapa kok pada <i>"gambar 1.0"</i> kok yang antar router ke router kok enggak
+                dipasang kabel ya? kenapa ya? ada yang tau tidak? 🤔 <br>
+                kenapa tidak dipasang kabel? jawaban nya ya karna pada router tersebut port nya tidak ada lagi makanya
+                tidak dipasang kabel , "trus harus bagimana?" <br>
+                yang harus kita lakukan adalah kita TAMBAHIN port nya pada router. "Caranya ?" <br>
+                kalian tinggal pencet : <br>
+            <ol>
+                <li>Router</li>
+                <li>Matikan router nya</li>
+                <li>Pilih yang <i>WIC-1ENET</i>, Lalu drag and drop ke tempat yang kosong</li>
+                <li>Jangan lupa nyalakan kembali router nya </li>
+            </ol>
+            </p>
+
+            <div class="image">
+                <img src="images/topologi3.png" style="width: 80%;" alt="">
+                <small><i><b>Gambar 2.0</b></i></small>
+            </div>
+            <p>
+                Lakukan langkah yang sama ke router satunya. setelah semuanya terpasang langkah selanjutnya adalah
+                <i>MENGKONFIGURASI</i> antar Router, Pencencet Router 0 dan ikuti langkah berikut : <br>
+            </p>
+            <h1 class="heading"> setting IP <br> ROUTER 0 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Would you like to enter the initial configuration dialog? [yes/no]: no <br>
+
+                Press RETURN to get started! <br>
+
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#<span style="color: coral;">int fa0/0</span> <br>
+                Router(config-if)#ip add 192.168.2.1 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up <br>
+
+                Router(config-if)#<span style="color: lightgreen;">int fa0/1</span> <br>
+                Router(config-if)#ip add 192.168.3.1 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up <br>
+
+                Router(config-if)#<span style="color: firebrick;">int et0/0/0</span> <br>
+                Router(config-if)#ip add 10.10.10.3 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface Ethernet0/0/0, changed state to up <br>
+
+                Router(config-if)#ex <br>
+                Router(config)#ex <br>
+                Router# <br>
+                %SYS-5-CONFIG_I: Configured from console by console <br>
+
+                Router#write <br>
+                Building configuration... <br>
+                [OK] <br>
+                Router#
+            </p>
+            <p>
+                Ya, kita sudah membuat ip statik pada "Router0" langkah selanjutnya adalah kita seting router sebelah
+                nya yaitu "Router1", untuk settinggan nya sama ya yang berbeda hanya no IP nya ikuti Langkah berikut :
+            </p>
+            <h1 class="heading"> setting IP <br> ROUTER 1 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Would you like to enter the initial configuration dialog? [yes/no]: no <br>
+
+                Press RETURN to get started! <br>
+
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#int fa0/0 <br>
+                Router(config-if)#ip add 192.168.4.1 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up <br>
+
+                Router(config-if)#int fa0/1 <br>
+                Router(config-if)#ip add 192.168.5.1 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up <br>
+
+                Router(config-if)#int et0/0/0 <br>
+                Router(config-if)#ip add 10.10.10.4 255.255.255.0 <br>
+                Router(config-if)#no sh <br>
+
+                Router(config-if)# <br>
+                %LINK-5-CHANGED: Interface Ethernet0/0/0, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0/0, changed state to up <br>
+
+                Router(config-if)#ex <br>
+                Router(config)#ex <br>
+                Router# <br>
+                %SYS-5-CONFIG_I: Configured from console by consolebr <br>
+
+                Router#write <br>
+                Building configuration... <br>
+                [OK] <br>
+                Router#
+            </p>
+            <div class="image">
+                <img src="images/topologi4.png" style="width: 80%;" alt="">
+                <small><i><b>Gambar 3.0</b></i></small>
+            </div>
+            <p>
+                temen-temen bisa lihat sendiri yaa.. untuk Topologi sudah berwarna hijau semua ya, eitsss... tapi belum
+                terhubung ke antar ROUTER yaa, terlebih dahulu kita harus settingg secara DHCP dulu ya, Pencet kembali
+                di ROUTER 0 kita akan setting DHCP :
+            </p>
+            <h1 class="heading"> setting DHCP <br> ROUTER 0 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#ip dhcp pool fa0/0 <br>
+                Router(dhcp-config)#default 192.168.2.1 <br>
+                Router(dhcp-config)#network 192.168.2.0 255.255.255.0 <br>
+                Router(dhcp-config)#dns 8.8.8.8 <br>
+                Router(dhcp-config)#ex <br>
+                Router(config)#ip dhcp pool fa0/1 <br>
+                Router(dhcp-config)#default 192.168.3.1 <br>
+                Router(dhcp-config)#network 192.168.3.0 255.255.255.0 <br>
+                Router(dhcp-config)#dns 8.8.8.8 <br>
+                Router(dhcp-config)#ex <br>
+                Router(config)#
+            </p>
+            <h1 class="heading"> setting DHCP <br> ROUTER 1 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#ip dhcp pool fa0/0 <br>
+                Router(dhcp-config)#default 192.168.4.1 <br>
+                Router(dhcp-config)#network 192.168.4.0 255.255.255.0 <br>
+                Router(dhcp-config)#dns 8.8.8.8 <br>
+                Router(dhcp-config)#ex <br>
+                Router(config)#ip dhcp pool fa0/1 <br>
+                Router(dhcp-config)#default 192.168.5.1 <br>
+                Router(dhcp-config)#network 192.168.5.0 255.255.255.0 <br>
+                Router(dhcp-config)#dns 8.8.8.8 <br>
+                Router(dhcp-config)#ex <br>
+                Router(config)#
+            </p>
+            <p>Setelah kalian sudah meyetting DHCP, langkah selanjutnya adalah kalian pergi ke PC untuk berikan IP yang
+                sudah kita setting, lalu kalian pilh yang DHCP, maka IP addres akan muncul sendiri/keluar secara
+                otomatis. <br>
+                langkah <b><i>TERAKHIR</i>.</b> yaitu kita <i>"ip route"</i> kan agar semua komputer dapat saling
+                terhubung dengan antar Router. <br>
+                ikuti cara di bawah ini :
+            </p>
+            <h1 class="heading"> setting IP route <br> ROUTER 0 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#ip route 192.168.4.0 255.255.255.0 10.10.10.4 <br>
+                Router(config)#ip route 192.168.5.0 255.255.255.0 10.10.10.4 <br>
+                Router(config)#ip route 10.10.10.0 255.255.255.0 10.10.10.4 <br>
+                Router(config)#
+            </p>
+            <h1 class="heading"> setting IP route <br> ROUTER 1 </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Router>enable <br>
+                Router#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Router(config)#ip route 192.168.2.0 255.255.255.0 10.10.10.3 <br>
+                Router(config)#ip route 192.168.3.0 255.255.255.0 10.10.10.3 <br>
+                Router(config)#ip route 10.10.10.0 255.255.255.0 10.10.10.3 <br>
+                Router(config)#
+            </p>
+            <p>
+                Jika semua sudah di setting mulai dari ("pemberian IP", "setting DHCP", "setting IP route") langkah yang
+                paling <b><i>AKHIR</i></b> ia lah, kalian saling "PING" kan antar router seperti Dibawah : 👍👌
+            </p>
+            <div class="image">
+                <img src="images/pig 1.png" style="width: 35%;" alt="">
+                <small><i><b>Gambar 4.0</b></i></small>
+            </div>
+            <div class="image">
+                <img src="images/pig 2.png" style="width: 35%; margin-top: 10px;" alt="">
+                <small><i><b>Gambar 5.0</b></i></small>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> <i class="fas fa-lightbulb"></i> educa </h3>
+                <p>NasWeb akan mmeberikan Edukasi kepada kalian semua tentang ilmu. Anjay 😎👊</p>
+                <div class="share">
+                    <a href="https://m.facebook.com/ignasius.sigit.1" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/ignasiussigit/" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html" class="link">home</a>
+                <a href="about.html" class="link">about</a>
+                <a href="courses.html" class="link">courses</a>
+                <a href="contact.html" class="link">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#" class="link">help center</a>
+                <a href="#" class="link">ask questions</a>
+                <a href="#" class="link">send feedback</a>
+                <a href="#" class="link">private policy</a>
+                <a href="#" class="link">terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest upadates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>mr. web designer</span> | all rights reserved! </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

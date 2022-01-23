@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Router</title>
+
+    <link rel="icon" href="./images/linux-hero.png">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> NasWeb </a>
+
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="courses.html">courses</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+    <!-- account form section starts  -->
+
+    <div class="account-form">
+
+        <div id="close-form" class="fas fa-times"></div>
+
+        <div class="buttons">
+            <span class="btn active login-btn">login</span>
+            <span class="btn register-btn">register</span>
+        </div>
+
+        <form class="login-form active" action="">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+        <form class="register-form" action="">
+            <h3>register now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <input type="password" placeholder="confirm your password" class="box">
+            <input type="submit" value="register now" class="btn">
+        </form>
+
+    </div>
+
+    <!-- account form section ends -->
+
+    <!-- header section ends -->
+
+    <section class="heading-link">
+        <h3>1 ROUTER <br> 1 SWITCH <br> 2 PC</h3>
+        <p> <a href="cisco.html">Back</a> / cisco </p>
+    </section>
+
+    <!-- contact section starts  -->
+
+    <section class="contact">
+
+        <h1 class="heading"> Topologi </h1>
+        <div class="container">
+            <div class="hero" style="text-align: center;">
+                <img src="./images/topologi.png" alt="">
+            </div>
+            <div class="artikel" style="font-size: 18px;">
+                <p>Gambar diatas merupakan Topologi, jika kalian sudah membuat topologi seperti diatas maka ikuti
+                    langkah langkah berikut Untuk membuat ip secara DHCP : <br>
+                </p>
+                <div class="persiapan">
+                    <h4>
+                        <center>Apa yang harus di persiapkan:</center>
+                    </h4>
+                    <center>
+                        <p>•> Router 1841</p>
+                        <p>•> Switch 2950 24</p>
+                        <p>•> Pc</p>
+                    </center>
+                </div>
+                <p style="margin-top: 5px;">
+                    <b>1.)</b> pencet Router pilih => CLI (kita sudah masuk ke dalam command line / fungsi nya untuk
+                    mengkonfigurasi) <br>
+                    <b>2.)</b> Would you like to enter the initial configuration dialog? [yes/no]: (Pilih <span
+                        style="color: red;">NO</span>) <br>
+                    <b>3.)</b> disini saya menggunakan IP claas("C") yaitu <i>192.168.2.1</i> itu sebagai
+                    defaultgateaway
+                </p>
+                <p style="margin-top: 5px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                    Router> <br>
+                    Router><span style="background-color: yellowgreen; color: white;">enable</span> <br>
+                    Router#<span style="background-color: teal; color: white;">conf t</span> <br>
+                    Enter configuration commands, one per line. End with CNTL/Z. <br>
+                    Router(config)#<span style="color: chartreuse;">int fa0/0</span> <br>
+                    Router(config-if)#<span style="color: crimson;">ip add 192.168.2.1 255.255.255.0</span> <br>
+                    Router(config-if)#<span style="color: dodgerblue;">no sh</span> <br>
+
+                    Router(config-if)# <br>
+                    %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up <br>
+
+                    %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up <br>
+
+                    Router(config-if)#
+                </p>
+                <p style="margin-top: 14PX;">
+                    <b>4.)</b> Kita sudah membuat IP, tetapi ip yang kita setting masih bersifat statik/manual (yang
+                    kita butuhkan adalah IP DHCP ) <br>
+                    <b>5.)</b> Setting IP DHCP :
+                </p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                    Router>enable <br>
+                    Router#conf t <br>
+                    Enter configuration commands, one per line. End with CNTL/Z. <br>
+                    Router(config)#ip dhcp pool fa0/0 <br>
+                    Router(dhcp-config)#default 192.168.2.1 <br>
+                    Router(dhcp-config)#network 192.168.2.0 255.255.255.0 <br>
+                    Router(dhcp-config)#dns 8.8.8.8 <br>
+                    Router(dhcp-config)#ex <br>
+                    Router(config)#
+                </p>
+                <p style="margin-top: 14px;">
+                    <b>6.)</b> Sekarang sudah kita setting secara DHCP , kalian bisa cek apakah sudah DHCP atau belum,
+                    dengan cara, kalian pecet ==> PC ==> IP Configuration ==> pilih yang DHCP , jika ip nya sesuai yang
+                    telah kita buat arttinya <span style="background-color: green; color: white;">BERHASL</span> <br>
+                    <b>7.)</b> Langkah yang terakhir yaitu tinggal PING kan amtar PC
+                </p>
+                <div class="gambar">
+                    <p style="text-align: center;">
+                        <img src="./images/ping.png" style="width: 200px;" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section ends -->
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> <i class="fas fa-lightbulb"></i> NasWeb </h3>
+                <p>NasWeb akan mmeberikan Edukasi kepada kalian semua tentang ilmu. Anjay 😎👊
+                </p>
+                <div class="share">
+                    <a href="https://m.facebook.com/ignasius.sigit.1" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/ignasiussigit/" class="fab fa-instagram"></a>
+                    <a href="https://tiktok.com/@matrix007213" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html" class="link">home</a>
+                <a href="about.html" class="link">about</a>
+                <a href="courses.html" class="link">courses</a>
+                <a href="contact.html" class="link">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#" class="link">help center</a>
+                <a href="#" class="link">ask questions</a>
+                <a href="#" class="link">send feedback</a>
+                <a href="#" class="link">private policy</a>
+                <a href="#" class="link">terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest upadates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>Ignasius</span> | all rights reserved! </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
