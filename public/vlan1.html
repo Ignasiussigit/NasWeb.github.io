@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLAN</title>
+
+    <link rel="icon" href="../images/linux-hero.png">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> NasWeb </a>
+
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+            <a href="../home.html">home</a>
+            <a href="../public/about.html">about</a>
+            <a href="../public/blog.html">blog</a>
+            <a href="../public/contact.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+    <!-- account form section starts  -->
+
+    <div class="account-form">
+
+        <div id="close-form" class="fas fa-times"></div>
+
+        <div class="buttons">
+            <span class="btn active login-btn">login</span>
+            <span class="btn register-btn">register</span>
+        </div>
+
+        <form class="login-form active" action="">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+        <form class="register-form" action="">
+            <h3>register now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <input type="password" placeholder="confirm your password" class="box">
+            <input type="submit" value="register now" class="btn">
+        </form>
+
+    </div>
+
+    <!-- account form section ends -->
+
+    <!-- header section ends -->
+
+    <section class="heading-link">
+        <h3>1 SWITCH<br> 6 PC</h3>
+        <p> <a href="../public/cisco.html">Back</a> / cisco </p>
+    </section>
+
+    <!-- about section starts  -->
+    <h1 class="heading"> MENGKONFIGURASI VLAN PADA SWITCH </h1>
+    <section class="about">
+
+        <div class="image">
+            <img src="../images/vlan1.png" alt="">
+            <small><i><b>Gambar 1.0</b></i></small>
+        </div>
+        <div class="image">
+        </div>
+
+        <div class="content">
+            <p style="font-style: oblique;">
+                <span style="color: salmon;"> VLAN adalah teknologi pada perangkat layer 2 (Switch) yang memungkinkan
+                    dalam satu perangkat Switch
+                    dapat dibagi menjadi beberapa kelompok yang berbeda-beda.</span> Bisa dibilang dengan menggunakan
+                VLAN, satu
+                Switch seperti terdiri lebih dari satu Switch. berdasarkan pengalaman saya dengan menggunakan VLAN saya
+                dapat menghemat penggunaan Switch yang tadinya butuh 3, cukup satu saja.
+            </p>
+            <h3 class="about-title">Apa yang harus dipersiapkan? :</h3>
+            <p style="font-weight: bold;">
+                •> 1 Switch 2950-24 <br>
+                •> 6 Pc
+            </p>
+            <p>Untuk mengkonfigurasi VLAN pada Switch Cisco ada beberapa tahapan yang harus dilakukan pada Switch,
+                berikut ini adalah langkah-langkahnya :
+            </p>
+            <p>
+                •>Buat terlebih dahulu VLAN yang akan dikonfigurasi :
+            </p>
+
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: lightslategray; color: black; width: 100%; padding: 10px; border-radius: 5px;">
+                Switch(config)#vlan [vlan-id] <br>
+                Switch(config-vlan)#name [nama] <br>
+                Switch(config-vlan)#exit
+            </p>
+
+            <p style="font-style: italic;">
+                VLAN-ID adalah angka desimal untuk mengidentifikasi VLAN, setelah itu akan masuk dalam mode konfigurasi
+                VLAN, disini kita dapat melakukan beberapa konfigurasi seperti memberikan nama, mengatur MTU, dll.
+            </p>
+
+            <p>
+                •>Lalu masukan VLAN tersebut dalam port interface Switch yang diinginkan.
+            </p>
+
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: lightslategray; color: black; width: 100%; padding: 10px; border-radius: 5px;">
+                Switch(config)#int f0/2 <br>
+                Switch(config-if)#switchport mode access <br>
+                Switch(config-if)#switchport access vlan [vlan-id] <br>
+            </p>
+
+            <p>
+                Sekarang kita akan mengkonfigurasi LAB VLAN yang saya buat dibawah ini :
+            </p>
+            <div class="image">
+                <img src="../images/vlan2.png" style="width: 80%;" alt="">
+                <small><i><b>Gambar 2.0</b></i></small>
+            </div>
+            <p>
+                Topologi diatas akan kita buat pada aplikasi Cisco Packet Tracer, dalam topologi tersebut terdapat satu
+                Switch yang akan kita bagi menjadi dua VLAN yaitu VLAN 10 dan VLAN 20.
+            </p>
+
+            <h1 style="font-size: 25px; font-weight: bold;">MEMBUAT VLAN</h1>
+
+            <p>
+                Pertama kita buat dua VLAN tersebut dalam database VLAN switch yang kita konfigurasi tersebut :
+            </p>
+
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: grey; color: white;  padding: 10px; border-radius: 5px;">
+                SW1(config)#vlan 10 <br>
+                SW1(config-vlan)#name kelompok1 <br>
+                SW1(config-vlan)#exit <br>
+                SW1(config)#vlan 20 <br>
+                SW1(config-vlan)#name kelompok2 <br>
+                SW1(config-vlan)#exit
+            </p>
+
+            <p>
+                Untuk verifikasi VLAN yang sudah dibuat, kita dapat melihat database VLAN di Switch dengan perintah
+                "<span style="font-family: 'Times New Roman', Times, serif;">show vlan brief.</span> "
+            </p>
+
+            <p>
+                SW1#<span style="font-family: 'Times New Roman', Times, serif;">sh vlan brief</span>
+            </p>
+
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: grey; color: white; padding: 10px; border-radius: 5px;">
+                VLAN Name Status Ports <br>
+                ---- -------------------------------- ---------<br>
+                1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4 <br>
+                Fa0/5, Fa0/6, Fa0/7, Fa0/8 <br>
+                Fa0/9, Fa0/10, Fa0/11, Fa0/12 <br>
+                Fa0/13, Fa0/14, Fa0/15, Fa0/16 <br>
+                Fa0/17, Fa0/18, Fa0/19, Fa0/20 <br>
+                Fa0/21, Fa0/22, Fa0/23, Fa0/24 <br>
+                Gig0/1, Gig0/2 <br>
+                <span style="color: white; background-color: tomato;">
+                    10 kelompok1 active <br>
+                    20 kelompok2 active <br>
+                </span>
+                1002 fddi-default active <br>
+                1003 token-ring-default active <br>
+                1004 fddinet-default active <br>
+                1005 trnet-default activebr
+            </p>
+            <p>
+                Kita bisa lihat daftar VLAN yang ada pada Switch ini, secara default seluruh Port interface Switch
+                berada pada VLAN 1, dan untuk VLAN 10 dan 20 belum berisi anggota, maka setelah ini kita perlu memasukan
+                VLAN 10 dan 20 pada beberapa interface switch tersebut sesuai topologi diatas.
+            </p>
+            <h1 style="font-size: 25px; font-weight: bold;">MEMASUKAN VLAN</h1>
+            <p>Setelah VLAN sudah terbuat dan masuk dalam database Switch, kita masukan VLAN tersebut pada satu atau
+                beberapa port Switch (memberikan anggota pada VLAN).</p>
+
+            <h1 style="font-size: 20px; font-weight: bold;">VLAN 10</h1>
+            <p>
+            <ol>
+                <li>.) fa0/1</li>
+                <li>.) fa0/2</li>
+                <li>.) fa0/3</li>
+            </ol>
+            </p>
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: grey; color: white; padding: 10px; border-radius: 5px;">
+                SW1(config)#int range f0/1-3 <br>
+                SW1(config-if-range)#switchport mode access <br>
+                SW1(config-if-range)#switchport access vlan 10 <br>
+                SW1(config-if-range)#exit
+            </p> <br>
+
+            <h1 style="font-size: 20px; font-weight: bold;">VLAN 20</h1>
+            <p>
+            <ol>
+                <li>.) fa0/4</li>
+                <li>.) fa0/5</li>
+                <li>.) fa0/6</li>
+            </ol>
+            </p>
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: grey; color: white; padding: 10px; border-radius: 5px;">
+                SW1(config)#int range f0/4-6 <br>
+                SW1(config-if-range)#switchport mode access <br>
+                SW1(config-if-range)#switchport access vlan 20 <br>
+                SW1(config-if-range)#exit
+            </p>
+            <p style="text-align: center; color: red;">*Kita bisa menggunakan tambahan perintah range, jika ingin
+                mengkonfigurasi sekaligus.</p>
+            <p>Setelah selesai, tunggu lampu indikator switch menjadi hijau kembali, lalu kita lihat kembali database
+                vlan switch dengan perintah sh vlan brief.</p>
+
+            <p>
+                SW1#<span style="font-family: 'Times New Roman', Times, serif;">sh vlan brief</span>
+            </p>
+
+            <p
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: grey; color: white; padding: 10px; border-radius: 5px;">
+                VLAN Name Status Ports <br>
+                ---- -------------------------------- --------- <br>
+                1 default active Fa0/7, Fa0/8, Fa0/9, Fa0/10 <br>
+                Fa0/11, Fa0/12, Fa0/13, Fa0/14 <br>
+                Fa0/15, Fa0/16, Fa0/17, Fa0/18 <br>
+                Fa0/19, Fa0/20, Fa0/21, Fa0/22 <br>
+                Fa0/23, Fa0/24, Gig0/1, Gig0/2 <br>
+                <b>
+                    <span style="background-color: green; color: white;"> 10 kelompok1 active </span>&nbsp;
+                    <span style="background-color: #0eb582; color: white;"> Fa0/1,
+                        Fa0/2, Fa0/3 </span> <br>
+                    <span style="background-color: green; color: white;"> 20 kelompok2 active </span> &nbsp;
+                    <span style="background-color: #0eb582; color: white;"> Fa0/4,
+                        Fa0/5, Fa0/6 </span> <br>
+                </b>
+                1002 fddi-default active <br>
+                1003 token-ring-default active <br>
+                1004 fddinet-default active <br>
+                1005 trnet-default active
+            </p>
+
+            <p>
+                Kita bisa lihat anggota VLAN 10 dan 20 sudah bertambah setelah kita konfigurasi, setiap PC/Devices yang
+                terhubung dengan port interface yang berada di VLAN 10 maka PC tersebut berada di VLAN 10, begitu juga
+                dengan VLAN 20.
+            </p>
+
+            <h1 class="heading"> setting IP <br> SWITCH </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                Switch#conf t <br>
+                Enter configuration commands, one per line. End with CNTL/Z. <br>
+                Switch(config)# <span style="color: tomato;"> int vlan10</span> <br>
+                Switch(config-if)# <br>
+                Switch(config-if)#ip add 10.10.10.1 255.255.255.0 <br>
+                Switch(config-if)#no sh <br>
+                Switch(config-if)# <span style="color:#0eb582"> int vlan20</span> <br>
+                Switch(config-if)# <br>
+                %LINK-5-CHANGED: Interface Vlan20, changed state to up <br>
+
+                %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan20, changed state to up <br>
+
+                Switch(config-if)#ip add 20.20.20.1 255.255.255.0 <br>
+                Switch(config-if)#no sh <br>
+                Switch(config-if)#ex
+            </p>
+            <p>
+                Ya, kita sudah membuat ip statik pada "SWITCH" langkah selanjutnya adalah kita seting DHCP pada SWITCH
+                nya, untuk settinggan nya sama ya, yang berbeda hanya no IP nya ikuti Langkah berikut :
+            </p>
+            <h1 class="heading"> setting DHCP <br> SWITCH </h1>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+                witch(config)# <span style="color: tomato;">ip dhcp pool vlan10</span> <br>
+                Switch(dhcp-config)#default 10.10.10.1 <br>
+                Switch(dhcp-config)#network 10.10.10.0 255.255.255.0 <br>
+                Switch(dhcp-config)#dns 8.8.4.4 <br>
+                Switch(dhcp-config)#ex <br>
+                Switch(config)# <span style="color: #0eb582;">ip dhcp pool vlan20 </span> <br>
+                Switch(dhcp-config)#default 20.20.20.1 <br>
+                Switch(dhcp-config)#network 20.20.20.0 255.255.255.0 <br>
+                Switch(dhcp-config)#dns 8.8.4.4 <br>
+                Switch(dhcp-config)#ex
+            </p>
+            <p>
+                untuk konfigurasi nya sudah selesai ya guyss, tinggal berikan ip pada Komputer/pc dan jangan lupa pilih
+                yang DHCP karna kita sudah settings DHCP. bisa lihat di <i>" gambar 3.0 "</i>
+            </p>
+            <div class="image">
+                <img src="../images/dhcp vlan.png" style="width: 80%;" alt="">
+                <small><i><b>Gambar 3.0</b></i></small>
+            </div>
+
+            <h1 style="font-size: 20px; font-weight: bold; margin-top: 20px;">VLAN 10</h1>
+            <p>
+            <ol>
+                <li>.) PC01 = 10.10.10.2</li>
+                <li>.) PC02 = 10.10.10.3</li>
+                <li>.) PC03 = 10.10.10.4</li>
+            </ol>
+            </p>
+
+            <h1 style="font-size: 20px; font-weight: bold; margin-top: 20px;">VLAN 20</h1>
+            <p>
+            <ol>
+                <li>.) PC04 = 10.10.10.5</li>
+                <li>.) PC05 = 10.10.10.6</li>
+                <li>.) PC06 = 10.10.10.7</li>
+            </ol>
+            </p>
+
+            <p>tinggla di ping kan antar koputer</p>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <td>
+                            <b>ping PC 1 ke PC 3</b> <br>
+                            <div class="image"><img src="../images/pig 1.png" alt=""></div> <br>
+                            <b>Gambar 4.0</b>
+                        </td>
+                        <td>
+                            <b>ping PC 4 ke PC 6</b> <br>
+                            <div class="image"><img src="../images/pig 2.png" alt=""></div> <br>
+                            <b>Gambar 5.0</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p> <a href="../public/cisco.html"> <button type="button"
+                        style="padding:10px; background-color: #0eb582; color: white; border-radius: 5px;">Back</button></a>
+            </p>
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> <i class="fas fa-lightbulb"></i> educa </h3>
+                <p>NasWeb akan mmeberikan Edukasi kepada kalian semua tentang ilmu. Anjay 😎👊</p>
+                <div class="share">
+                    <a href="https://m.facebook.com/ignasius.sigit.1" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/ignasiussigit/" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html" class="link">home</a>
+                <a href="about.html" class="link">about</a>
+                <a href="courses.html" class="link">courses</a>
+                <a href="contact.html" class="link">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#" class="link">help center</a>
+                <a href="#" class="link">ask questions</a>
+                <a href="#" class="link">send feedback</a>
+                <a href="#" class="link">private policy</a>
+                <a href="#" class="link">terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest upadates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>Ignasius</span> | all rights reserved! </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
