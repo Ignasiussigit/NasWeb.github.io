@@ -1092,3 +1092,12 @@ section {
   border: 1px solid black;
   padding: 15px;
 }
+
+.about .content ul li {
+  font-size: 1.6rem;
+  line-height: 0.5;
+  color: #777;
+  padding: 1rem 0;
+  margin-left: 50px;
+  margin-top: -35px;
+}

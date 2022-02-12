@@ -119,12 +119,12 @@
             <img src="../images/contact-img.png" alt="">
          </div>
 
-         <form name="websiteku">
+         <form name="websiteku1">
             <h3>send us a message</h3>
             <input type="text" placeholder="name" class="box" name="nama">
             <input type="email" placeholder="email" class="box" name="email">
             <input type="number" placeholder="phone" class="box" name="telpon">
-            <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10" name="pesan"></textarea>
+            <textarea name="pesan" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
             <button type="submit" value="send message" class="btn">KIRIM</button>
          </form>
 
@@ -304,8 +304,8 @@
    <script src="../js/script.js"></script>
 
    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbw-4FvPL5oUDrYu0bqcuL6wc-NRIK-CCA6Vv_MQQkKvyU3QQx6B_x5xdpDS_djBEyq4/exec'
-      const form = document.forms['websiteku']
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbytBhoDewEeXSFimSe0ncY_Knp7HPHFYnoBohu4tQdiLEp5sTkQILpnp9-JVL_0UclT/exec'
+      const form = document.forms['websiteku1']
 
       form.addEventListener('submit', e => {
          e.preventDefault()
@@ -314,7 +314,6 @@
             .catch(error => console.error('Error!', error.message))
       })
    </script>
-
 </body>
 
 </html>
