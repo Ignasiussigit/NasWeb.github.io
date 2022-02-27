@@ -1335,3 +1335,11 @@ section {
 
 }
 /* ends video css */
+
+body a {
+  text-decoration: none;
+}
+
+.back i:hover {
+  color: salmon;
+}
