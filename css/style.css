@@ -1019,7 +1019,7 @@ section {
 .container .popup-img span {
   position: absolute;
   margin-top: 190px;
-  right: 10px;
+  right: 100px;
   font-size: 40px;
   font-weight: bolder;
   color:#fff;
@@ -1035,6 +1035,12 @@ section {
   width: 550px;
   object-fit: cover;
   padding: 60px;
+}
+
+@media (max-width:768px) {
+  .container .popup-img img {
+    width: 95%;
+  }
 }
 
 
