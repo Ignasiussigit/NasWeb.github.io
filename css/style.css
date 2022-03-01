@@ -1039,7 +1039,7 @@ section {
 
 @media (max-width:768px) {
   .container .popup-img img {
-    width: 95%;
+    width:;
   }
 }
 
@@ -1154,6 +1154,11 @@ section {
 
 .table-container tr td {
   border: 1px solid black;
+  padding: 15px;
+}
+
+.table-container1 tr td {
+  border: none;
   padding: 15px;
 }
 
