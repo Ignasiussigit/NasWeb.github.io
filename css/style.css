@@ -1039,7 +1039,7 @@ section {
 
 @media (max-width:768px) {
   .container .popup-img img {
-    width:;
+    width: 95%;
   }
 }
 
