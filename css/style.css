@@ -42,7 +42,8 @@ section {
 
 .heading-link {
   text-align: center;
-  background: url(../images/heading-bg.jpg) no-repeat;
+  /* nama gambar aslinya "heading-bg.jpg" */
+  background: url(../images/heading-bg.jpg) no-repeat; 
   background-size: cover;
   background-position: center;
 }
@@ -147,6 +148,7 @@ section {
   font-size: 2rem;
   text-transform: capitalize;
   color: #444;
+  font-weight: bold;
 }
 
 .header .navbar a:hover {
@@ -1206,7 +1208,7 @@ section {
 
 
 .warna {
-  background: linear-gradient(to right, #0eb582, #f0fdfa );
+  background: url(../images/background1.jpg) no-repeat; 
 }
 
 .container1{
@@ -1347,4 +1349,32 @@ body a {
 
 .back i:hover {
   color: salmon;
+}
+
+.box .content {
+  background-color: white;
+}
+.warna {
+  background: url(../images/background1.jpg) no-repeat; 
+}
+
+.warna1 {
+  background: url(../images/background1.jpg) no-repeat; 
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.anim-text {
+  background-image: linear-gradient(90deg, #065ba5, #d630f2, #ff002f, #e4ff00, #d630f2, #065ba5);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate {
+  0%{background-position:0 0}
+  100%{background-position:300% 0}
 }

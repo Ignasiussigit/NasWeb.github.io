@@ -54,10 +54,10 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
         <nav class="navbar">
             <div id="close-navbar" class="fas fa-times"></div>
-            <a href="../home.html">home</a>
-            <a href="../public/about.html">about</a>
-            <a href="../public/blog.html">blog</a>
-            <a href="../public/contact.html">contact</a>
+            <a href="../home.html" class="anim-text">home</a>
+            <a href="../public/about.html" class="anim-text">about</a>
+            <a href="../public/blog.html" class="anim-text">blog</a>
+            <a href="../public/contact.html" class="anim-text">contact</a>
         </nav>
 
         <div class="icons">
@@ -183,7 +183,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             </p>
 
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: #f9f9f9;   padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: #f9f9f9;   padding: 10px; border-radius: 5px; border-left: 5px solid green;">
                 SW1(config)#vlan 10 <br>
                 SW1(config-vlan)#name kelompok1 <br>
                 SW1(config-vlan)#exit <br>
@@ -202,7 +202,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             </p>
 
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9;  padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9;  padding: 10px; border-radius: 5px; border-radius: 5px; border-left: 5px solid green;">
                 VLAN Name Status Ports <br>
                 ---- -------------------------------- ---------<br>
                 1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4 <br>
@@ -233,13 +233,19 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             <h1 style="font-size: 20px; font-weight: bold;">VLAN 10</h1>
             <p>
             <ol>
-                <li>.) fa0/1</li>
-                <li>.) fa0/2</li>
-                <li>.) fa0/3</li>
+                <li>
+                    <p>.) fa0/1</p>
+                </li>
+                <li>
+                    <p>.) fa0/2</p>
+                </li>
+                <li>
+                    <p>.) fa0/3</p>
+                </li>
             </ol>
             </p>
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px; border-radius: 5px; border-left: 5px solid green;">
                 SW1(config)#int range f0/1-3 <br>
                 SW1(config-if-range)#switchport mode access <br>
                 SW1(config-if-range)#switchport access vlan 10 <br>
@@ -249,13 +255,19 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             <h1 style="font-size: 20px; font-weight: bold;">VLAN 20</h1>
             <p>
             <ol>
-                <li>.) fa0/4</li>
-                <li>.) fa0/5</li>
-                <li>.) fa0/6</li>
+                <li>
+                    <p>.) fa0/4</p>
+                </li>
+                <li>
+                    <p>.) fa0/5</p>
+                </li>
+                <li>
+                    <p>.) fa0/6</p>
+                </li>
             </ol>
             </p>
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px; border-radius: 5px; border-left: 5px solid green;">
                 SW1(config)#int range f0/4-6 <br>
                 SW1(config-if-range)#switchport mode access <br>
                 SW1(config-if-range)#switchport access vlan 20 <br>
@@ -301,7 +313,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
             <h1 class="heading"> setting IP <br> SWITCH </h1>
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px; border-radius: 5px; border-left: 5px solid green;">
                 Switch#conf t <br>
                 Enter configuration commands, one per line. End with CNTL/Z. <br>
                 Switch(config)# <span style="color: tomato;"> int vlan10</span> <br>
@@ -324,7 +336,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             </p>
             <h1 class="heading"> setting DHCP <br> SWITCH </h1>
             <p
-                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; background-color: #f9f9f9; padding: 10px; border-radius: 5px; border-radius: 5px; border-left: 5px solid green;">
                 witch(config)# <span style="color: tomato;">ip dhcp pool vlan10</span> <br>
                 Switch(dhcp-config)#default 10.10.10.1 <br>
                 Switch(dhcp-config)#network 10.10.10.0 255.255.255.0 <br>
@@ -348,18 +360,30 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             <h1 style="font-size: 20px; font-weight: bold; margin-top: 20px;">VLAN 10</h1>
             <p>
             <ol>
-                <li>.) PC01 = 10.10.10.2</li>
-                <li>.) PC02 = 10.10.10.3</li>
-                <li>.) PC03 = 10.10.10.4</li>
+                <li>
+                    <p>.) PC01 = 10.10.10.2</p>
+                </li>
+                <li>
+                    <p>.) PC02 = 10.10.10.3</p>
+                </li>
+                <li>
+                    <p>.) PC03 = 10.10.10.4</p>
+                </li>
             </ol>
             </p>
 
             <h1 style="font-size: 20px; font-weight: bold; margin-top: 20px;">VLAN 20</h1>
             <p>
             <ol>
-                <li>.) PC04 = 10.10.10.5</li>
-                <li>.) PC05 = 10.10.10.6</li>
-                <li>.) PC06 = 10.10.10.7</li>
+                <li>
+                    <p>.) PC04 = 10.10.10.5</p>
+                </li>
+                <li>
+                    <p>.) PC05 = 10.10.10.6</p>
+                </li>
+                <li>
+                    <p>.) PC06 = 10.10.10.7</p>
+                </li>
             </ol>
             </p>
 
