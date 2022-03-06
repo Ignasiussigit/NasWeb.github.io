@@ -1,0 +1,275 @@
+<!-- =====================================================================================================
+========================== Halooo !!! ngintip aja nih ============================================
+==========================================================================================================
+
+NYARI APA NIH? HEHE... I CAN SEE YOU
+SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIAT INI !
+
+                                                                                            
+     :::       .:.                                   ::          .:.                  .&@~          
+    .@@@#      P@#                                  ^@@:         B@Y                  .@@!          
+    .@@#@#     P@#     ..^~~~^.          .:~~~~~:   .@@^         &@7      .~~~:       .@@~  :~~:    
+    .@@^5@#    P@#    !@&BGGB&@&!      !#@#GGGB#J    &@7   ..    @@^   .5@&BGB&@B^    .@@JP@&&&@@P  
+    .@@^ G@B   P@#     .      ?@@^    ~@@~           #@Y  :@@?  .@@.  :@@7     !@@~   .@@@B^   :@@G 
+    .@@^  B@G  P@#       :^~~^7@@!    .&@&Y~.        G@P  #@@@: :@@   #@&^^~~~^^&@#   .@@J      7@@:
+    .@@^   #@P 5@#    7#@&BBBB#@@!      ~5#&@@&P^    J@B J@7~@# ^@#   @@&GBBBBBBGBY   .@@~      ^@@^
+    .@@^    #@JP@#   ?@@!     .@@!          .^P@@7   !@&:@#  G@Y!@G   #@#             .@@~      Y@&.
+    .@@^     &@@@#   J@@~   .?&@@!    ..      !@@!   :@@&@.   &@&@5   :@@B^     ..    .@@?    .Y@@^ 
+    .&&^     .#@&G    ?&@&###P^B@^    J@&&###&&P^    .&&@7    ^&@@!     J#&&&###&B     G&&&&#&&#?   
+                         ...            .....                              ....           ....      
+
+==========================================================================================================
+==========================================================================================================
+=======================================================================================================-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaca</title>
+
+    <link rel="icon" href="../images/linux-hero.png">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cuca.css">
+
+</head>
+
+<body class="warna">
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> NasWeb </a>
+
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+            <a href="../home.html" class="anim-text">home</a>
+            <a href="about.html" class="anim-text">about</a>
+            <a href="blog.html" class="anim-text">blog</a>
+            <a href="contact.html" class="anim-text">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+    <!-- account form section starts  -->
+
+    <div class="account-form">
+
+        <div id="close-form" class="fas fa-times"></div>
+
+        <div class="buttons">
+            <span class="btn active login-btn">login</span>
+            <span class="btn register-btn">register</span>
+        </div>
+
+        <form class="login-form active" action="">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+        <form class="register-form" action="">
+            <h3>register now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <input type="password" placeholder="confirm your password" class="box">
+            <input type="submit" value="register now" class="btn">
+        </form>
+
+    </div>
+
+    <!-- account form section ends -->
+
+    <!-- header section ends -->
+
+    <!-- cuaca starts -->
+    <div class="container">
+        <div class="wrapper">
+            <header><i class="fas fa-chevron-left"></i>Kembali</header>
+
+            <section class="input-part">
+                <div class="text-info"></div>
+                <input type="text" placeholder="Masukkan nama kota…" required>
+                <div class="separator"></div>
+                <button>Dapatkan Lokasi Saat Ini</button>
+            </section>
+
+            <div class="weather-container">
+                <section class="weather-part">
+                    <p class="location"><i class="fas fa-map-marker-alt"></i><span></span></p>
+                    <img src="img/clouds.png" alt="weather icon">
+                    <p class="temp"><span>20</span> °C</p>
+                    <p class="description">Broken Clouds</p>
+
+                    <div class="weather-info">
+                        <div class="column feels">
+                            <p class="title">Terasa seperti</p>
+                            <p class="deg"><i class="fas fa-thermometer"></i><span></span> °C</p>
+                        </div>
+                        <div class="column category">
+                            <p class="title">Kategori</p>
+                            <p class="deg"><i class="fas fa-sun"></i><span></span></p>
+                        </div>
+                        <div class="column humidity">
+                            <p class="title">Kelembaban</p>
+                            <p class="deg"><i class="fas fa-tint"></i><span></span> %</p>
+                        </div>
+                        <div class="column wind">
+                            <p class="title">Kecepatan angin</p>
+                            <p class="deg"><i class="fas fa-tachometer-alt"></i><span></span> m/s</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <p style="padding: 20px;"> <a href="../home.html"> <button type="button"
+                style="padding:10px; background-color: coral; color: white; border-radius: 5px ; font-size: 12px;"> <i
+                    class="fas fa-chevron-left"></i> Back</button></a>
+    </p>
+    <!-- cuaca ends -->
+
+
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> <i class="fas fa-lightbulb"></i> NasWeb </h3>
+                <p>NasWeb akan mmeberikan Edukasi kepada kalian semua tentang ilmu. Anjay 😎👊</p>
+                <div class="share">
+                    <a href="https://m.facebook.com/ignasius.sigit.1" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/ignasiussigit/" class="fab fa-instagram"></a>
+                    <a href="https://tiktok.com/@matrix007213" class="fab fa-tiktok"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html" class="link">home</a>
+                <a href="./public/about.html" class="link">about</a>
+                <a href="./public/blog.html" class="link">blog</a>
+                <a href="./public/contact.html" class="link">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#" class="link">help center</a>
+                <a href="#" class="link">ask questions</a>
+                <a href="#" class="link">send feedback</a>
+                <a href="#" class="link">private policy</a>
+                <a href="#" class="link">terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest upadates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="credit"> di buat dengan <i class="fas fa-heart" style="color: red;"></i> oleh <span>Ignasius</span>
+            <br>
+            &copy; NasWeb 2022
+        </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- custom js file link  -->
+    <script src="../js/video.js"></script>
+
+    <!-- cuca script -->
+    <script src="../js/cuca.js"></script>
+
+    <script>
+        let navbar = document.querySelector('.header .navbar')
+
+        document.querySelector('#menu-btn').onclick = () => {
+            navbar.classList.add('active');
+        }
+
+        document.querySelector('#close-navbar').onclick = () => {
+            navbar.classList.remove('active');
+        };
+
+        let registerBtn = document.querySelector('.account-form .register-btn');
+        let loginBtn = document.querySelector('.account-form .login-btn');
+
+        registerBtn.onclick = () => {
+            registerBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+            document.querySelector('.account-form .login-form').classList.remove('active');
+            document.querySelector('.account-form .register-form').classList.add('active');
+        };
+
+        loginBtn.onclick = () => {
+            registerBtn.classList.remove('active');
+            loginBtn.classList.add('active');
+            document.querySelector('.account-form .login-form').classList.add('active');
+            document.querySelector('.account-form .register-form').classList.remove('active');
+        };
+
+    </script>
+
+</body>
+
+</html>
