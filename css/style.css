@@ -1395,3 +1395,13 @@ body a {
   width: 100%;
   background-attachment: fixed;
 }
+
+/* kotak (di html "maunyariapa") */
+
+.kotak {
+  box-shadow: 10px 10px 25px #d0d0d0, -10px -10px 35px #ffff;
+}
+
+.image {
+  box-shadow: 20px 20px 35px #d0d0d0, -20px -20px 35px #fff;
+}
