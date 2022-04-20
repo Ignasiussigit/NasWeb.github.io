@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --color-grey: #eee;
+    --color-dark-grey: #222831;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0fdfa;
+}
+
+.kotak {
+    height: 100vh;
+}
+
+/* UTILITY */
+.p-small {
+    padding-bottom: 5px;
+}
+.p-medium {
+    padding-bottom: 10px;
+}
+.p-y {
+    padding: 10px 0;
+}
+.m-y {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* img {
+    width: 100%;
+} */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+header h1 {
+    border-top: 3px solid lightgreen;
+    border-bottom: 3px solid salmon;
+    font-size: 30px;
+    color: #db6400;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+header form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+form > * {
+    margin-bottom: 5px;
+    outline: none;
+    font-size: 15px;
+    padding: 20px;
+    border: 1px solid #777;
+    border-radius: 3px;
+}
+
+form textarea {
+    padding: 80px 0 40px 20px;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+::placeholder {
+    font-size: 13px;
+}
+
+form button {
+    background-color: #0eb582;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+form button:hover {
+    background-color: var(--color-sec);
+}
+
+.note {
+    padding: 1rem;
+    /* border: 1px solid #777; */
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 3rem 0;
+    box-shadow: 10px 10px 25px #d0d0d0, -10px -10px 25px #fff;
+
+}
+
+.note-counter {
+    font-size: 12px;
+}
+
+.note-text {
+    font-size: 20px;
+    border: 1px solid #0eb582;
+    padding: 5px;
+}
+
+.note-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.note-btn {
+    padding: 7px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: rgb(224, 102, 57);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: var(--color-primary);
+}
+
+
+.tengah {
+    display: flex;
+    justify-content: center;
+}

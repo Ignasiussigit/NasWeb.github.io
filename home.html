@@ -45,6 +45,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/komentar.css">
 
 </head>
 
@@ -412,6 +413,42 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
    </div>
    <!-- apa kata mereka ends -->
 
+   <!-- komentar -->
+
+
+   <header>
+      <div class="container">
+         <h1>Komentar</h1>
+         <div class="tengah">
+            <form action="">
+               <input type="text" id="note-title" placeholder="Note title">
+               <textarea id="note-text" placeholder="Note Details"></textarea>
+               <button id="add-btn">Add Note</button>
+            </form>
+         </div>
+      </div>
+   </header>
+
+   <section>
+      <div class="container">
+         <h2>Komentar Anda</h2>
+         <hr>
+         <div id="notes">
+
+            <div class="note">
+               <p class="note-counter">Komentar ${index + 1}</p>
+               <h3 class="note-title"> $element.title </h3>
+               <p class="note-text"> $element.text</p>
+               <button class="note-btn">Delete Note</button>
+               <button class="notr-btn edit-btn">Delete Note</button>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- akhir komentar -->
+
 
 
 
@@ -482,6 +519,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
    <!-- swiper js link  -->
    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="./js/komentar.js"></script>
 
    <!-- script bootstrap -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
