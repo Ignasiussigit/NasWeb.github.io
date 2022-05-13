@@ -117,7 +117,8 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
         <div class="content" style="text-align: center;">
             <h1 style="font-size: 25px;">Nyari Link cheat Quizizz <br> ??? <br> ........ </h1> <br>
-            <button type="button" onclick="myFunction()" style="padding: 15px; font-size: 14px; border-radius: 8px;">Kik
+            <button type="button" id="tombol" onclick="myFunction()"
+                style="padding: 15px; font-size: 14px; border-radius: 8px;">Kik
                 disini</button>
             <br>
             <br>
@@ -139,6 +140,16 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
 
     </section>
+
+
+    <p class="back" style="padding: 20px;">
+        <a href="../public/cisco.html">
+            <button type="button"
+                style="padding:15px; background-color: #0eb582; color: white; border-radius: 5px; font-size: 14px;">
+                <i class="fas fa-chevron-left"> Back</i>
+            </button>
+        </a>
+    </p>
 
     <!-- about section ends -->
 
@@ -216,6 +227,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                 document.getElementById("belajar").style.display = "block",
                 document.getElementById("belajar").style.background = "lightblue"
             document.getElementById("orang").innerHTML = nama
+            document.getElementById("tombol").style.display = "none"
         }
 
     </script>

@@ -117,9 +117,23 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
    <section class="about">
 
-      <div class="image">
-         <img src="../images/aku2.jpg" alt="" style="border-radius: 15px;">
+      <!-- <div class="container11"> -->
+      <div class="image-container">
+         <div class="image" style="border-radius: 15px;">
+            <img src="../images/saya.jpg" alt="" style="border-radius: 15px;">
+         </div>
       </div>
+      <!-- </div> -->
+
+      <div class="popup-img">
+         <span style="cursor: pointer;">&times;</span>
+         <img src="../images/saya.jpg" alt="" onclick="myfunction()">
+         <span
+            style="font-size: 25px; text-align: center; margin-top: 100px; margin-right: 100px; color: darkgoldenrod;"
+            id="ganteng">Lumayan
+            lah..</span>
+      </div>
+
 
       <div class="content">
          <h3 class="about-title">Sejarah Website</h3>
@@ -146,6 +160,9 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
             </div>
          </div>
       </div>
+
+
+
 
    </section>
 
@@ -336,6 +353,21 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 
    <!-- custom js file link  -->
    <script src="../js/script.js"></script>
+
+
+   <script>
+      document.querySelectorAll('.image-container img').forEach(image => {
+         image.onclick = () => {
+            document.querySelector('.popup-img').style.display = 'block';
+            document.querySelector('.popup-img img').src = image.getAttribute('src');
+            // document.getElementById("ganteng").innerHTML = h2
+         }
+      });
+
+      document.querySelector('.popup-img span').onclick = () => {
+         document.querySelector('.popup-img').style.display = 'none';
+      };
+   </script>
 
 </body>
 
