@@ -77,6 +77,56 @@ section {
   color: #444;
 }
 
+/* baguan heading header CybeScurity */
+
+.heading-link1 {
+  text-align: center;
+  /* nama gambar aslinya "heading-bg.jpg" */
+  background: url(../images/head-cyber.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.heading-link1 h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.heading-link1 p {
+  font-size: 3rem;
+  line-height: 2;
+  color: salmon;
+  font-weight: 900;
+  backdrop-filter: blur(10px);
+}
+
+/* .heading-link1 h3 p {
+  backdrop-filter: blur(10px);
+} */
+
+.heading-link1 p a {
+  color: #0eb582;
+  font-weight: 900;
+}
+
+.heading-link1 p a:hover {
+  text-decoration: underline;
+}
+
+/* .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+} */
+
+/* akhih heading CyberScuritty */
+
+
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -1493,4 +1543,20 @@ body a {
   .about .popup-img img {
     width: 90%;
   }
+}
+
+
+
+/* bagian cyber scurity */
+
+.pembukaan {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 25px #d0d0d0, -10px -10px 25px #fff;
+  margin-top: 30px;
+}
+
+.hilang {
+  display: none;
 }
