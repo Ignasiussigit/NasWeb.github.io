@@ -23,6 +23,27 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
 =======================================================================================================-->
 
 
+
+
+<?php
+
+include '../config.php';
+session_start();
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:../login.php');
+};
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:../login.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,58 +161,47 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                     </div>
                     <h3>Penginstalaan</h3>
                     <h3>KaliLinux</h3>
-                    <a href="../public/1router.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1router.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
 
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/root-kali.jpg" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/root-kali.jpg" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara masuk root </h3>
                     <h3>di KaliLinux</h3>
-                    <a href="../public/2router.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/2router.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
 
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/ngrok-setting.jpg" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/ngrok-setting.jpg" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Setting Ngrok</h3>
-                    <a href="../public/3router.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/3router.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/Keylogger.jpeg" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/Keylogger.jpeg" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Setting KeyLooger</h3>
-                    <a href="../public/vlan1.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/vlan1.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/wordlist1.png" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/wordlist1.png" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara membuat </h3>
                     <h3>Wordlist</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/metasploit.jpg" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/metasploit.jpg" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara membuat </h3>
                     <h3>File Backdoor</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
@@ -199,18 +209,15 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                     </div>
                     <h3>Cara membuat </h3>
                     <h3>virus</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/lacakfoto.jpg" alt=""
-                            style="width: 100%; height: 180px; border-radius: 20px;">
+                        <img src="../images/lacakfoto.jpg" alt="" style="width: 100%; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara melacak file </h3>
                     <h3>Lokasi foto</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
 
                 <!-- foto dihilangkan  -->
@@ -218,61 +225,49 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                 <!-- <div class="icons-container"> -->
                 <div class="icons " style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/lacak-username.png" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/lacak-username.png" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara melacak Username </h3>
                     <h3>media Social</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/osintgram.jpg" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/osintgram.jpg" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>melihat informasi </h3>
                     <h3>user instagram</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/phising.png" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/phising.png" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara melakukan </h3>
                     <h3>Phising</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/burpsuite.png" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/burpsuite.png" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara melakukan hack password </h3>
                     <h3>menggunakan burpsuite</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/seeker.jpg" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/seeker.jpg" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara melacak lokasi </h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
                 <div class="icons" style="border-radius: 20px;">
                     <div class="gambar">
-                        <img src="../images/aircrack-ng.jpg" alt=""
-                            style="width: 220px; height: 180px; border-radius: 20px;">
+                        <img src="../images/aircrack-ng.jpg" alt="" style="width: 220px; height: 180px; border-radius: 20px;">
                     </div>
                     <h3>Cara mendapatkan <br> password tetangga</h3>
-                    <a href="../public/1server.html"><button type="button"
-                            style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
+                    <a href="../public/1server.html"><button type="button" style="padding: 10px; background-color: #0eb582; color: white; margin-top: 5px;">Buka</button></a>
                 </div>
             </div>
     </div>
@@ -285,8 +280,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
     </div> -->
 
 
-    <marquee direction="left"
-        style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <marquee direction="left" style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         Anjay mau jadi hangker 👊😎
     </marquee>
     </section>
@@ -306,8 +300,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                 </div>
                 <p class="accordion-content">
                     Jika masih belum paham dengan artikel di atas silahkan pencet link di bawah ini : <br>
-                    <button type="button" style="padding:10px; background-color: #0eb582; border-radius: 5px;"><a
-                            href="../public/videocisco.html" style="color: white;">Lihat video </a></button>
+                    <button type="button" style="padding:10px; background-color: #0eb582; border-radius: 5px;"><a href="../public/videocisco.html" style="color: white;">Lihat video </a></button>
                 </p>
             </div>
 
@@ -318,8 +311,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                 </div>
                 <p class="accordion-content">
                     Cara mengetahui jawaban pada quizizz <br>
-                    <button type="button" style="background-color: #0eb582;; border-radius: 5px; padding: 10px;"><a
-                            href="./maunyariapa.html" style="color: #fff;">Klik disini</a></button>
+                    <button type="button" style="background-color: #0eb582;; border-radius: 5px; padding: 10px;"><a href="./maunyariapa.html" style="color: #fff;">Klik disini</a></button>
                 </p>
             </div>
 
@@ -378,8 +370,7 @@ SELAMAT BELAJAR, JANGAN JADI ORANG BIASA !!! HUSST JANGAN BILANG BILANG UDAH LIA
                 </div>
                 <p class="accordion-content">
                     Cara mengkonfigurasi Mikrotik VLAN dengan menggunakan Software WinBox <br>
-                    <button type="button" style="background-color: #0eb582;; border-radius: 5px; padding: 10px;"><a
-                            href="./mikrotik_1.html" style="color: #fff;">Klik disini</a></button>
+                    <button type="button" style="background-color: #0eb582;; border-radius: 5px; padding: 10px;"><a href="./mikrotik_1.html" style="color: #fff;">Klik disini</a></button>
                 </p>
             </div>
 

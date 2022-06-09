@@ -47,7 +47,7 @@
 }
 
 .btn {
-    background-color: var(--blue);
+    background-image: linear-gradient(to right, #6190E8, #A7BFE8);
 }
 
 .btn:hover {
@@ -55,6 +55,7 @@
 }
 
 .delete-btn {
+    /* background-image: linear-gradient(to right, #C193C5, #7BC6CC); */
     background-color: var(--red);
 }
 
@@ -236,9 +237,10 @@
 }
 
 .baca {
+    width: 50%;
     margin-top: 10px;
     background-color: #0eb582;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -251,6 +253,92 @@
     color: #fff;
 }
 
-.header span {
+.header1 span {
     color: #0eb582;
 }
+
+.header1 {
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+}
+
+.footer {
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    bottom: 1rem;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.footer small {
+    font-size: 20px;
+}
+
+/* membuat animasi text pada footer */
+
+.anim-text {
+    background-image: linear-gradient(90deg, #6190E8, #A7BFE8, #C193C5, #7BC6CC);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: animate 5s infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 300% 0;
+    }
+}
+
+/* animasi selesai */
+
+/* bagian popup-img */
+
+.popup-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.popup-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-img span {
+    position: absolute;
+    right: 2rem;
+    font-size: 60px;
+    color: salmon;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* bagian responsive popup */
+@media (max-width:768px) {
+    .popup-img img {
+        width: 90%;
+    }
+}
+
+/* popup-img selesai */

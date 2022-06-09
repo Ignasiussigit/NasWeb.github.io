@@ -13,9 +13,9 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select) > 0) {
         $row = mysqli_fetch_assoc($select);
         $_SESSION['user_id'] = $row['id'];
-        header('location:home.php');
+        header('location:./public/cyberscurity.php');
     } else {
-        $message[] = 'incorrect email or password!';
+        $message[] = 'passwordnya salah euyyy!';
     }
 }
 
@@ -30,6 +30,9 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
 
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style1.css">
 
@@ -37,7 +40,7 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="header">
+    <div class="header1">
         <h1>
             <center><span>N</span>as<span>W</span>eb</center>
         </h1>
@@ -56,10 +59,20 @@ if (isset($_POST['submit'])) {
             <input type="email" name="email" placeholder="enter email" class="box" required>
             <input type="password" name="password" placeholder="enter password" class="box" required>
             <input type="submit" name="submit" value="login now" class="btn">
-            <p>don't have an account? <a href="register.php">regiser now</a></p>
+            <p>Belum punya akun? <a href="register.php">Register sekarang</a></p>
+            <a href="./public/blog.html" style="color: white;">
+                <div class="baca" style="background-color: salmon;"><i class="fas fa-chevron-left"> &nbsp; BACK</i></div>
+            </a>
         </form>
 
     </div>
+
+    <div class="footer">
+        <small class="anim-text">
+            <a href="https://www.instagram.com/ignasiussigit/">&copy; NasWeb 2022</a>
+        </small>
+    </div>
+
 
 </body>
 
